@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <div class="jumbotron">
+        @using (Html.BeginForm("IndexAsync", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div>
+                @Html.TextBox("file", "", new { type = "file" }) <br />
+
+                <input type="submit" value="Upload" />
+
+                @ViewBag.Message
+
+            </div>
+            @ViewBag.x1
+
+        }
+    </div>
+
+</div>
+
+<div class="row">
+
+        @ViewBag.x2
+
+    
+</div>
